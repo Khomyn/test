@@ -1,0 +1,44 @@
+.header-block {
+	display: flex;
+	min-height: 108px;
+	padding: 10px 0;
+	
+	[class*='header-block_'] {
+		width: 100%;
+		padding: 10px;
+	}
+	
+	[class*='-content'] {
+		height: 100%;
+	}
+	
+	&__one {
+		max-width: 142px;
+		width: 100%;
+	}
+	
+	&__two {
+		max-width: 299px;
+	
+	}
+	
+	&__three {
+		max-width: 539px;
+	}
+	
+	.info-block {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+		padding: 10px 20px;
+		
+		a {
+			@include text($fs-base, 400, $ff-regular, 22px);
+		}
+		
+		&__tel {
+			text-decoration: none;
+		}
+	}
+}
