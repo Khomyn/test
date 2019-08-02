@@ -1,0 +1,16 @@
+a {
+  @include text($fs-base, 400, $ff-regular, 22px);
+  text-decoration: none;
+}
+
+h2 {
+  @include text($fs-base, 700, $ff-bold, 22px);
+}
+
+strong {
+  font-family: $ff-bold;
+}
+
+p {
+  @include text($fs-base, 400, $ff-regular, 22px, $grey);
+}

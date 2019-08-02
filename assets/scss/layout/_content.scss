@@ -1,27 +1,85 @@
 .content {
-	display: flex;
-	padding: 10px 0;
-	border: solid $black;
-	border-width: 1px 0 1px;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px 0 15px;
+  border: solid $black;
+  border-width: 1px 0 1px;
 }
 
 .sidebar {
-	max-width: 194px;
-	width: 100%;
-	padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 10px;
+  @include tablet {
+    max-width: 194px;
+    padding: 10px 10px 10px 0;
+  }
 	
-	&__one {
-		padding: 20px 13px;
-	}
+  &__one {
+    padding: 20px 13px;
+  }
 	
-	.menu {
-		a {
-			@include text($fs-base, 400, $ff-regular, 22px);
-			text-decoration: none;
-		}
-	}
+  .menu {
+    a {
+      text-decoration: none;
+    }
+  }
+	
+  &__two {
+    margin: 20px auto 10px;
+    @include tablet {
+      margin: auto 0 0 0;
+    }
+  }
 }
 
-.main {
-	width: calc(100% - 194px);
+.main-block {
+  width: 100%;
+  @include tablet {
+    width: calc(100% - 194px);
+    padding-left: 10px;
+  }
+
+  &__large {
+    padding: 10px 0;
+    
+    &-item {
+      padding: 20px;
+	    
+      ul {
+        list-style: disc;
+        padding: 24px 30px 21px 40px;
+        @include text($fs-base, 400, $ff-regular, 22px, $grey);
+	    }
+    }
+  }
+  
+  &__small {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+   
+    &-item {
+      width: 135px;
+      height: 150px;
+      margin: 10px;
+    }
+  }
+	
+  &__medium {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    
+    &-item {
+      width: calc(100% - 20px);
+      padding: 20px 20px 26px;
+      margin: 10px;
+      @include tablet {
+        width: calc(50% - 20px);
+      }
+    }
+  }
 }

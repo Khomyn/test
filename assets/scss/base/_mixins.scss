@@ -21,3 +21,11 @@
     @content;
   }
 }
+
+@mixin absolute ($top: auto, $left: auto, $bottom: auto, $right: auto) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
