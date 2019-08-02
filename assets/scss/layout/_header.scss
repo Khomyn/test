@@ -35,11 +35,11 @@
   }
 	
   &__three {
-	  width: 100%;
-	  @include tablet {
-		  @include absolute(10px, auto, auto, -20px);
-		  width: 55.4%;
-	  }
+    width: 100%;
+    @include tablet {
+      @include absolute(10px, auto, auto, -20px);
+      width: 55.4%;
+    }
   }
 	
   .info-block {
